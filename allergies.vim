@@ -1,4 +1,4 @@
-""" The map for an allergy to a bit flag
+" The map for an allergy to a bit flag
 let s:map = { 'cats' 		: 128,
 	\		  'pollen' 		: 64,
 	\		  'chocolate' 	: 32,
@@ -8,14 +8,13 @@ let s:map = { 'cats' 		: 128,
 	\		  'peanuts' 	: 2,   
 	\		  'eggs' 		: 1 }
 
-""" Returns true if the score covers the given allergy. 
-""" False otherwise.
+" Returns true if the score covers the given allergy. 
+" False otherwise.
 function! AllergicTo(score, allergy) abort
 	return and(a:score, s:map[a:allergy]) > 0 
 endfunction
-
-
-""" Returns a sorted list of all allergies covered by score
+		
+" Returns a sorted list of all allergies covered by score
 function! List(score) abort
 	if a:score == 0 
 		return [] 
