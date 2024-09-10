@@ -46,7 +46,7 @@ function! IsPaired(str)
 		endif
 	endfor
 
-	return (l:stack->empty() ? 1 : 0) 
+	return l:stack->empty()
 endfunction
 			
 
